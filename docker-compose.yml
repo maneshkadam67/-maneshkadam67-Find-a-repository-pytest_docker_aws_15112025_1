@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  pytest-runner:
+    build: .
+    container_name: test_docker_15112025_1
+    image: docker_pytest_15112025
+    volumes:
+      - .:/app
+    command: ["pytest", "-v", "--html=Reports/report.html"]
